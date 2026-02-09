@@ -2,22 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <title>Dom_learning</title>
-    <style>
-        body{
-        background-color: rgb(40, 38, 38);
-            color: azure;
-    }
-        
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript</title>
 </head>
-<body>
-    <div class="bg_black">
-        <h1 id="header">Document Object Model</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus rerum sapiente asperiores aspernatur ut. Necessitatibus iste placeat deserunt id hic saepe officiis consequatur itaque facere quae doloremque quos assumenda, praesentium magni blanditiis, iure accusantium.
-        </p>
+<body style="background-color: black;">
+    <div class="parent" style="background-color: black; color:aliceblue" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednessday</div>
+        <div class="day">Thursday</div>
+        <div class="class">Friday</div>
+        <div class="class">Saturday</div>
+        <div class="class">Sunday</div>
     </div>
-    
+    <script>
+        const parent=document.querySelector(".parent");
+//  console.log(parent);
+// const 2ndchild=parent.firstElementChild;
+parent.querySelector(":nth-child(2)").style ="background-color: green";
+const day=document.querySelector('.day')
+// console.log(day)
+// console.log(day.nextElementSibling.innerHTML)
+const div=document.querySelector('.parent')
+const newli=document.createTextNode("WEEkend");
+div.appendChild(newli);
+const sec=div.querySelector(":nth-child(2)")
+const li=document.createElement('li');
+li.innerHTML="HELLO"
+sec.replaceWith(li);
+li.remove
+console.log(sec);
+
+</script>
 </body>
 </html>
